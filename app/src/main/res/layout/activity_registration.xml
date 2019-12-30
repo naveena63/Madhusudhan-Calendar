@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_register"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Zastra.GSTIT.Utils.CustomTextViewNormal
+                android:id="@+id/newText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="80dp"
+                android:text="Start a new account"
+                android:textAlignment="center"
+                android:textColor="@color/black"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/userName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/userName"
+                        android:textSize="15dp"
+                        android:singleLine="true"
+                        android:inputType="textPersonName"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:textSize="15dp"
+                        android:id="@+id/phoneNumber"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/phonenumber"
+                        android:singleLine="true"
+                        android:inputType="number"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/email"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:textSize="15dp"
+                        android:hint="@string/hint_email"
+                        android:inputType="textEmailAddress"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/password"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:singleLine="true"
+                        android:hint="@string/hint_password"
+                        android:textSize="15dp"
+                        android:inputType="textPassword"
+                        />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:passwordToggleEnabled="true"
+                    android:padding="10dp">
+
+                    <EditText
+                        android:id="@+id/cnfrmPaswrd"
+                        android:layout_width="match_parent"
+                        android:singleLine="true"
+                        android:textSize="15dp"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/hint_confirm_password"
+                        android:inputType="textPassword"/>
+                </com.google.android.material.textfield.TextInputLayout>
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="horizontal"
+                    >
+                    <Zastra.GSTIT.Utils.CustomTextViewNormal
+                        android:id="@+id/dropDownState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Select state"
+                        android:textSize="15dp"
+                        android:textAlignment="center"
+                        android:drawableRight="@drawable/ic_arrow_drop_down_black_24dp"
+                        android:background="@drawable/background_shape"
+
+                        >
+
+
+                    </Zastra.GSTIT.Utils.CustomTextViewNormal>            />
+
+                    <!--                <Zastra.myapplication.Utils.CustomTextViewNormal-->
+                    <!--                    android:id="@+id/tvThemeColor"-->
+                    <!--                    android:layout_width="0dp"-->
+                    <!--                    android:layout_weight="1"-->
+                    <!--                    android:layout_height="wrap_content"-->
+                    <!--                    android:hint="Select state"-->
+                    <!--                    android:padding="11dp"-->
+                    <!--                    android:textAlignment="center"-->
+                    <!--                    android:background="@drawable/background_shape"-->
+
+                    <!--                    >-->
+
+                    <!--                </Zastra.myapplication.Utils.CustomTextViewNormal>-->
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+                <!--            <Zastra.myapplication.Utils.CustomTextViewNormal-->
+                <!--                android:id="@+id/tvThemeColor"-->
+                <!--                android:layout_width="match_parent"-->
+                <!--                android:layout_height="wrap_content"-->
+                <!--                android:hint="Select state"-->
+                <!--                android:background="@drawable/background_shape"-->
+                <!--                android:layout_margin="10dp"-->
+                <!--                >-->
+
+                <!--            </Zastra.myapplication.Utils.CustomTextViewNormal>-->
+                <Button
+                    android:id="@+id/buttonRegister"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="15dp"
+                    android:background="@color/colorAccent"
+                    android:text="@string/text_register"
+                    android:textColor="@color/white" />
+                <Zastra.GSTIT.Utils.CustomTextViewNormal
+                    android:id="@+id/goToLogin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/text_creat_account"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textSize="15dp"
+                    android:textStyle="bold"
+                    />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

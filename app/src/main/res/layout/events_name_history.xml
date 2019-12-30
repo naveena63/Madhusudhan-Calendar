@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    app:cardCornerRadius="5dp"
+    app:cardUseCompatPadding="true"
+    >
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:cardCornerRadius="5dp"
+        app:cardUseCompatPadding="true"
+        >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="0dp"
+        android:layout_margin="@dimen/margin_10dp"
+        android:background="@drawable/background_shape"
+        android:orientation="vertical">
+<LinearLayout
+    android:id="@+id/linear1"
+    android:layout_width="match_parent"
+    android:orientation="horizontal"
+    android:layout_height="wrap_content">
+    <Zastra.GSTIT.Utils.CustomTextViewNormal
+        android:id="@+id/tvEventNameText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+       android:layout_margin="@dimen/margin_10dp"
+        android:text="Event Name:"
+        android:textStyle="bold"
+
+        android:textColor="#0A0A0A"
+        android:textSize="15sp" />
+    <Zastra.GSTIT.Utils.CustomTextViewNormal
+        android:id="@+id/tvEventName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+    android:layout_margin="@dimen/margin_10dp"
+        android:text="Diwali Festival:"
+        android:textColor="#365E7E"
+        android:textSize="15sp" />
+</LinearLayout>
+        <LinearLayout
+            android:layout_below="@id/linear1"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content">
+            <Zastra.GSTIT.Utils.CustomTextViewNormal
+                android:id="@+id/tvEventDescText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+            android:layout_margin="@dimen/margin_10dp"
+                android:text="Event Description:"
+                android:textStyle="bold"
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" />
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:id="@+id/tvDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+         android:layout_margin="@dimen/margin_10dp"
+            android:text="Diwali Festival:"
+            android:textColor="#365E7E"
+            android:textSize="15sp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>
+</RelativeLayout>

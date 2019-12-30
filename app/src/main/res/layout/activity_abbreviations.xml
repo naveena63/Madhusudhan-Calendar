@@ -1,0 +1,432 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+   >
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar_about"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@color/white"
+        app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+        android:background="@color/colorAccent"/>
+
+    <TableRow
+        android:background="#0079D6"
+        android:padding="5dp">
+
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/white"
+            android:text="Abbrevation names" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="@color/white"
+            android:text="Full Form" />
+    </TableRow>
+
+    <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:text="CST"
+            android:textColor="@color/red"
+            />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Central Sales Tax" />
+    </TableRow>
+
+    <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/green"
+            android:text="CEA" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Central Excise Act" />
+    </TableRow>
+
+    <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/Blue"
+            android:text="ESI Act" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Employee State Insurance Act" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/orange"
+            android:text="@string/EPF" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Employees Provident Fund &amp; Miscellaneous Provisions Act" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/yellow"
+            android:text="EE(CNV)Act" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Employment Exchange (Compulsory Notification of Vacancies)Act" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/red"
+            android:text="EOU" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Export Oriented Unit" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/green"
+            android:text="EHTP" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Electronic Hardware Technology Part" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/Blue"
+            android:text="FEMA" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Foreign Exchange Management Act" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/orange"
+            android:text="GHMC" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Greater Hyderabad Municipal Corporation" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/yellow"
+            android:text="WCT" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Work Contract Tax" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/red"
+            android:text="MW Act" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="MInimum Wages Act" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/green"
+            android:text="PW Act" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Payment of Wages Act" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/Blue"
+            android:text="PACs" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Persons Acting in Concert" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/orange"
+            android:text="PCS" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Practicing Company Secretary" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/yellow"
+            android:text="SSi" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Small Scale Industries" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/red"
+            android:text="SEBI(LODR)" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="SEBI(Listing obligation and disclosure requirements) Regulations,2015" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/green"
+            android:text="TDS" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Tax Deducted at Source" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/Blue"
+            android:text="TCS" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Tax Collected at Source" />
+    </TableRow>  <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/orange"
+            android:text="ESI Act" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Employee State Insurance Act" />
+    </TableRow>
+    <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/yellow"
+            android:text="TOT" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Turnover Tax" />
+    </TableRow> <TableRow
+        android:background="#DAE8FC"
+        android:padding="5dp">
+
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.5"
+            android:textColor="@color/red"
+
+            android:text="VAT" />
+
+        <Zastra.GSTIT.Utils.CustomTextViewNormal
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="Value Added Tax" />
+    </TableRow>
+
+</TableLayout>
+    </ScrollView>
+</LinearLayout>
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--    xmlns:app="http://schemas.android.com/apk/res-auto"-->
+    <!--    xmlns:tools="http://schemas.android.com/tools"-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="match_parent"-->
+    <!--    android:orientation="vertical"-->
+    <!--    tools:context="Zastra.B5Calendar.SettingsMenu.AbbreviationsActivity">-->
+
+    <!--<Zastra.B5Calendar.Utils.CustomTextViewNormal-->
+    <!--    android:layout_width="match_parent"-->
+    <!--    android:layout_height="wrap_content"-->
+    <!--    android:text="@string/abbreviations"-->
+    <!--    android:textStyle="italic"-->
+    <!--    android:textSize="20dp"-->
+    <!--    android:textColor="@color/black"-->
+    <!--    />-->
+
+    <!--</LinearLayout>-->

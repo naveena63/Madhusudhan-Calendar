@@ -1,0 +1,85 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="Zastra.GSTIT.SettingsMenu.SettingsFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_setting"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:titleTextColor="@color/white"
+            app:navigationIcon="@drawable/ic_arrow_back_black_24dp"
+            android:background="@color/colorAccent"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:orientation="vertical"
+            android:background="@drawable/background_shape"
+            >
+            <Zastra.GSTIT.Utils.CustomTextViewNormal
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="About"
+                android:drawableLeft="@drawable/about_icon"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                />
+            <Zastra.GSTIT.Utils.CustomTextViewNormal
+                android:id="@+id/terms_conditions"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Terms And Conditions"
+                android:drawableLeft="@drawable/terms_condtns_logo"
+                android:drawablePadding="10dp"
+                android:padding="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                />
+            <Zastra.GSTIT.Utils.CustomTextViewNormal
+                android:id="@+id/helpDesk"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Help Desk"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/about_icon"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                />
+            <Zastra.GSTIT.Utils.CustomTextViewNormal
+                android:id="@+id/abbreviation"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Abbreviations"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/about_icon"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                />
+            <Zastra.GSTIT.Utils.CustomTextViewNormal
+                android:id="@+id/logOut"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Log Out"
+                android:padding="10dp"
+                android:drawableLeft="@drawable/logout_icon"
+                android:drawablePadding="10dp"
+                android:textColor="@color/black"
+                android:textSize="15dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</FrameLayout>
