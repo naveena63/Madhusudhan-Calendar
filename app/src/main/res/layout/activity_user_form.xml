@@ -62,7 +62,7 @@
    android:gravity="center"
     android:textColor="@color/red"
 
-    android:text="Any Help Please Contact B5"
+    android:text="Any Help Please Contact madhusudhan agarwal"
     />
 <ImageView
     android:id="@+id/btnClose"

@@ -26,6 +26,7 @@ public class HomeFragment extends Fragment {
         view = inflater.inflate(R.layout.fragment_home, container, false);
 
         toolbar = view.findViewById(R.id.toolbar);
+        toolbar.setTitle("GST IT Services");
 //toolbar.setTitle("B5 Compliance Calendar");
         toolbar.setTextAlignment(View.TEXT_ALIGNMENT_GRAVITY);
         TabLayout tabLayout = view.findViewById(R.id.tab_layout);
