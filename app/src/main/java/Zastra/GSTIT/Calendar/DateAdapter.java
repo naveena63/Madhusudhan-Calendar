@@ -73,6 +73,8 @@ public class DateAdapter extends RecyclerView.Adapter<DateAdapter.ItemRowHolder>
         this.type = type;
         this.mContext = context;
         mListener=listener;
+        setHasStableIds(true);
+
 
     }
 
@@ -88,7 +90,7 @@ public class DateAdapter extends RecyclerView.Adapter<DateAdapter.ItemRowHolder>
 
     @Override
     public void onBindViewHolder(ItemRowHolder itemRowHolder, final int i) {
-
+        itemRowHolder.setIsRecyclable(false);
         Date c = Calendar.getInstance().getTime();
         System.out.println("Current time => " + c);
         SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
@@ -338,7 +340,14 @@ public class DateAdapter extends RecyclerView.Adapter<DateAdapter.ItemRowHolder>
         EventAdapter itemListDataAdapter = new EventAdapter(mContext, singleSectionItems,listener);
         itemRowHolder.recycler_view_list.setAdapter(itemListDataAdapter);
     }
-
+    @Override
+    public int getItemViewType(int position) {
+        return position;
+    }
+    @Override
+    public long getItemId(int position) {
+        return position;
+    }
     @Override
     public int getItemCount() {
         return (null != dataList ? dataList.size() : 0);
@@ -367,10 +376,7 @@ public class DateAdapter extends RecyclerView.Adapter<DateAdapter.ItemRowHolder>
             mListener.onClick(v, getAdapterPosition());
         }
     }
-    @Override
-    public int getItemViewType(int position) {
-        return position;
-    }
+
 }
 
 

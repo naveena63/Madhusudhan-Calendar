@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">GST&amp;IT Services</string>
+    <string name="app_name">The File-It-Calendar</string>
     <string name="userName">UserName</string>
     <string name="text_register">Register</string>
     <string name="hint_email">Email</string>
@@ -19,9 +19,9 @@
     <string name="true_tick">\u2713</string>
     <string name="EPF">EPF &amp; MP Act</string>
 
-    <string name="About">“GST&amp;IT Services” is a Private Limited Company incorporated in the year 2007, under the Companies Act, 1956.
-Conceptualized by 5 young, dynamic and experienced professionals, ′ s USP is to provide solutions from “iota to infinite”.  comprises Professionals with Multi Disciplinary skills committed to offer corporate services of highest standard”.
-The promoters envisaged consolidation of versatile skills to have a cutting edge in the dynamic consulting market and master minded the inception of ‘B5’ , a company that is inclined to provide integrated solutions through diversified thoughts.
+    <string name="About">“The File-It-Calendar” is a Private Limited Company incorporated in the year 2007, under the Companies Act, 1956.
+Conceptualized by , dynamic and experienced professionals, ′ s USP is to provide solutions from “iota to infinite”.  comprises Professionals with Multi Disciplinary skills committed to offer corporate services of highest standard”.
+The promoters envisaged consolidation of versatile skills to have a cutting edge in the dynamic consulting market and master minded the inception of , a company that is inclined to provide integrated solutions through diversified thoughts.
 The principle of  is to add value to the Clients, Profession and Industry through ethical practices.
 The Aims and Aspirations of  are to provide pioneering solutions to corporate clients in Secretarial, Legal and Management aspects and to endure as premier corporate service provider.
 </string>
@@ -43,14 +43,21 @@ The Aims and Aspirations of  are to provide pioneering solutions to corporate cl
         We want you to understand the legal basis upon which you buy products from us.
     </string>
     <string name="suport">If you need any clarifications.Our team support team is happy to assist you</string>
-    <string name="contact_info">GST IT LEGAL\n
-              H.No:5-9-22/71A ,\n
-        MCH No.250,Near Birla Temple,\n
-        Adarsh Nagar Colony,\n
-        Hyderabad – 500063, Telangana.\n
-Tel / Fax No. : +91 – 40 – 23232327\n
-Mobile No. : +91 – 8978901913\n
-Email: mail@b5consulting.com\n
+    <string name="contact_info">MS AGARWAL &amp; Co
+Chartered Accountants\n
+409, 4th Floor,\n
+Malik Chamber,\n
+Hyderguda Main Road,\n
+Old MLA Quarters,\n
+Beside DMart,\n
+Opp. Swati Coffee Shop,\n
+Basheerbagh,\n
+Hyderabad,
+Telangana 500029\n
+Landline +91-40-66102570\n
+Office Mobile 63006 82670,63038 22460.\n
+        www.camsagarwal.com\n
+        CA Madhusudan Agarwal 9959505670
 </string>
     <string name="msg_subscribed">Successfull</string>
     <string name="msg_subscribe_failed">Failed</string>

@@ -60,7 +60,7 @@
     android:layout_height="wrap_content"
     android:layout_weight="1.7"
    android:gravity="center"
-    android:textColor="@color/red"
+    android:textColor="#3F51B5"
 
     android:text="Any Help Please Contact madhusudhan agarwal"
     />

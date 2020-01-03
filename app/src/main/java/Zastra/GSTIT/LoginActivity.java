@@ -3,6 +3,7 @@ package Zastra.GSTIT;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
@@ -51,14 +52,14 @@ public class LoginActivity extends AppCompatActivity {
     SharedPreferences sharedpreferences;
     SharedPreferences.Editor editor;
     String PREFERENCE = "AGENT";
-    ProgressBar progressBar;
+    ProgressDialog progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         //getSupportActionBar().hide();
         Typeface typeface = Typeface.createFromAsset(getAssets(), "fonts/segoeui.ttf");
-ProgressBar progressBar=new ProgressBar(this);
+ progressBar=new ProgressDialog(this);
         mobile = findViewById(R.id.loginMobile);
         loginPaswrd = findViewById(R.id.loginPaswrd);
         buttonLogin = findViewById(R.id.buttonLogin);
@@ -91,54 +92,16 @@ ProgressBar progressBar=new ProgressBar(this);
 
 
 
-    private void loginIn() {
-        int llPadding = 10;
-        LinearLayout ll = new LinearLayout(this);
-        ll.setOrientation(LinearLayout.HORIZONTAL);
-        ll.setPadding(llPadding, llPadding, llPadding, llPadding);
-        ll.setGravity(Gravity.CENTER);
-        LinearLayout.LayoutParams llParam = new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT);
-        llParam.gravity = Gravity.CENTER;
-        ll.setLayoutParams(llParam);
-
-        ProgressBar progressBar = new ProgressBar(this);
-        progressBar.setIndeterminate(true);
-        progressBar.setPadding(10, 10, 10, 10);
-        progressBar.setLayoutParams(llParam);
-
-        llParam = new LinearLayout.LayoutParams(ViewGroup.LayoutParams.WRAP_CONTENT,
-                ViewGroup.LayoutParams.WRAP_CONTENT);
-        llParam.gravity = Gravity.CENTER;
-        TextView tvText = new TextView(this);
-        tvText.setText("Loading ...");
-        tvText.setTextColor(Color.parseColor("#000000"));
-        tvText.setTextSize(10);
-        tvText.setLayoutParams(llParam);
-        ll.addView(progressBar);
-        ll.addView(tvText);
-
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setCancelable(true);
-        builder.setView(ll);
-
-        AlertDialog dialog = builder.create();
-        dialog.show();
-        Window window = dialog.getWindow();
-        if (window != null) {
-            WindowManager.LayoutParams layoutParams = new WindowManager.LayoutParams();
-            layoutParams.copyFrom(dialog.getWindow().getAttributes());
-            layoutParams.width = LinearLayout.LayoutParams.WRAP_CONTENT;
-            layoutParams.height = LinearLayout.LayoutParams.WRAP_CONTENT;
-            dialog.getWindow().setAttributes(layoutParams);
-        }
+public  void loginIn(){
         final String phone = mobile.getText().toString();
         final String paswrd = loginPaswrd.getText().toString();
+  progressBar.show();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.BASE_URL + AppConstants.LOGIN, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 try {
+                    progressBar.dismiss();
+
                     JSONObject jsonObject = new JSONObject(response);
                     String status = jsonObject.getString("status");
                     String message = jsonObject.getString("message");
@@ -185,8 +148,8 @@ ProgressBar progressBar=new ProgressBar(this);
                 new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                      //  setProgressDialog();
 
+                        progressBar.dismiss();
 
                         Toast.makeText(LoginActivity.this, "No network ", Toast.LENGTH_LONG).show();
                     }

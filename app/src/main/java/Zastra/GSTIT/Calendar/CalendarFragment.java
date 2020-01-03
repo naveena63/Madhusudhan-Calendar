@@ -1,5 +1,6 @@
 package Zastra.GSTIT.Calendar;
 
+import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -44,7 +45,7 @@ import Zastra.GSTIT.Utils.PrefManager;
 
 public class CalendarFragment extends Fragment implements RecyclerViewListener {
 
-    ProgressBar progressBar;
+    ProgressDialog progressBar;
     ArrayList<DateModel> allSampleData;
     ArrayList<EventModel> eventModelList;
     RecyclerView my_recycler_view;
@@ -65,7 +66,7 @@ RecyclerViewListener listener;
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState)
     {
-        view = inflater.inflate(R.layout.fragment_calendar, container, false);
+        view = inflater.inflate(R.layout.activity_main, container, false);
         requestQueue=Volley.newRequestQueue(getActivity());
         prefManager = new PrefManager(getContext());
 
@@ -75,7 +76,7 @@ RecyclerViewListener listener;
         tv_month = view.findViewById(R.id.tv_month);
         ib_prev = view.findViewById(R.id.ib_prev);
         tv_year = view.findViewById(R.id.tv_year);
-        progressBar = view.findViewById(R.id.progressBar);
+        progressBar =new ProgressDialog(getContext());
 
         //model list
         allSampleData = new ArrayList<>();
@@ -92,10 +93,10 @@ RecyclerViewListener listener;
         //setting recyclerview vieww
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 7);
         my_recycler_view.setLayoutManager(layoutManager);
-        DividerItemDecoration itemDecor = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
-        DividerItemDecoration itemDecor2 = new DividerItemDecoration(getActivity(), DividerItemDecoration.HORIZONTAL);
-        my_recycler_view.addItemDecoration(itemDecor);
-        my_recycler_view.addItemDecoration(itemDecor2);
+      //  DividerItemDecoration itemDecor = new DividerItemDecoration(getActivity(), DividerItemDecoration.VERTICAL);
+     //   DividerItemDecoration itemDecor2 = new DividerItemDecoration(getActivity(), DividerItemDecoration.HORIZONTAL);
+       // my_recycler_view.addItemDecoration(itemDecor);
+       // my_recycler_view.addItemDecoration(itemDecor2);
         my_recycler_view.setHasFixedSize(true);
         RecyclerViewListener listener = (view, position) -> {
            // Toast.makeText(getContext(), "Position " + position, Toast.LENGTH_SHORT).show();
@@ -247,11 +248,13 @@ RecyclerViewListener listener;
     private void getData() {
 
         String url_formation = AppConstants.BASE_URL + AppConstants.GETCALENDER + "date=" + output + "&type=month";
+       progressBar.show();
         StringRequest stringRequest = new StringRequest(Request.Method.POST, url_formation, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
                 Log.i("response", "response" + response);
                 try {
+                    progressBar.dismiss();
                     JSONObject jsonObject = new JSONObject(response);
                     String status = jsonObject.getString("status");
                     JSONObject jsonObject1 = jsonObject.getJSONObject("data");
@@ -279,14 +282,11 @@ RecyclerViewListener listener;
                                 String eventColor = jsonObject2.getString("color_code");
                                 Log.e("color", eventColor);
                                 eventModelList.add(new EventModel(eventName, eventColor));
-
                             }
                             dateModel.setAllItemsInSection(eventModelList);
                             allSampleData.add(dateModel);
-
                         }
                         my_recycler_view.setAdapter(dateadapter);
-
                         dateadapter.notifyDataSetChanged();
                      my_recycler_view.setFocusable(false);
                     }
@@ -297,7 +297,7 @@ RecyclerViewListener listener;
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+progressBar.dismiss();
                 Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_LONG).show();
             }
         }) {

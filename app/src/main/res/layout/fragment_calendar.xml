@@ -4,14 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-
     >
 
     <LinearLayout
         android:id="@+id/ll_calendar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
         android:orientation="vertical">
 
 
@@ -117,7 +115,6 @@
                 android:layout_weight="1"
                 android:background="@drawable/calendarbg"
                 android:gravity="center"
-
                 android:text="Tue"
                 android:textColor="@color/white" />
 
@@ -128,7 +125,6 @@
                 android:layout_weight="1"
                 android:background="@drawable/calendarbg"
                 android:gravity="center"
-
                 android:text="Wed"
                 android:textColor="@color/white" />
 
