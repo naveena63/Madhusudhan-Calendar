@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="Zastra.GSTIT">
+    package="zastrait.GSTIT">
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -19,22 +19,22 @@
         android:taskAffinity=".string"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".MainActivity"></activity>
-        <activity android:name=".Calendar.MyCalendarFormActivity" />
-        <activity android:name=".SettingsMenu.AbbreviationsActivity" />
-        <activity android:name=".Notification.NotificationActivity" /> <!-- android:networkSecurityConfig="@xml/network_security_config" -->
+        <activity android:name="zastrait.GSTIT.MainActivity"></activity>
+        <activity android:name="zastrait.GSTIT.Calendar.MyCalendarFormActivity" />
+        <activity android:name="zastrait.GSTIT.SettingsMenu.AbbreviationsActivity" />
+        <activity android:name="zastrait.GSTIT.Notification.NotificationActivity" /> <!-- android:networkSecurityConfig="@xml/network_security_config" -->
         <uses-library
             android:name="org.apache.http.legacy"
             android:required="false" />
 
-        <activity android:name=".Form.UserFormActivity" />
-        <activity android:name=".SettingsMenu.HelpActivity" />
-        <activity android:name=".SettingsMenu.TermsAndCondtionsActivity" />
-        <activity android:name=".SettingsMenu.AboutActivity" />
+        <activity android:name="zastrait.GSTIT.Form.UserFormActivity" />
+        <activity android:name="zastrait.GSTIT.SettingsMenu.HelpActivity" />
+        <activity android:name="zastrait.GSTIT.SettingsMenu.TermsAndCondtionsActivity" />
+        <activity android:name="zastrait.GSTIT.SettingsMenu.AboutActivity" />
         <activity
-            android:name=".BottomNavigtnActivity"
+            android:name="zastrait.GSTIT.BottomNavigtnActivity"
             android:label="@string/title_activity_bottom_navigtn" />
-        <activity android:name=".SplashActivity">
+        <activity android:name="zastrait.GSTIT.SplashActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <action android:name="android.intent.action.VIEW" />
@@ -50,13 +50,13 @@
         </service>
         -->
         <activity
-            android:name=".FormActivity"
+            android:name="zastrait.GSTIT.FormActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".LoginActivity"
+            android:name="zastrait.GSTIT.LoginActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
         <activity
-            android:name=".RegistrationActivity"
+            android:name="zastrait.GSTIT.RegistrationActivity"
             android:windowSoftInputMode="stateAlwaysHidden" />
     </application>
 

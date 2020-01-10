@@ -14,7 +14,7 @@
         android:layout_height="100dp"
         android:src="@drawable/madhusudhan_logo"
          />
-    <Zastra.GSTIT.Utils.CustomTextViewNormal
+    <zastrait.GSTIT.Utils.CustomTextViewNormal
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/app_name"

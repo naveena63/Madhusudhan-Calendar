@@ -20,7 +20,7 @@
     android:src="@drawable/madhusudhan_logo"
 
     />
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:id="@+id/newText"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -75,7 +75,7 @@
                 android:text="@string/text_login"
                 android:textStyle="bold"
                 android:textColor="@color/white" />
-            <Zastra.GSTIT.Utils.CustomTextViewNormal
+            <zastrait.GSTIT.Utils.CustomTextViewNormal
                 android:id="@+id/createNewAccount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

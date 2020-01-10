@@ -19,7 +19,7 @@
             android:orientation="vertical"
             >
 
-            <Zastra.GSTIT.Utils.CustomTextViewNormal
+            <zastrait.GSTIT.Utils.CustomTextViewNormal
                 android:id="@+id/eventDate"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

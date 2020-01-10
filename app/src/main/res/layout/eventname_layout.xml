@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:id="@+id/eventNme"
             android:layout_width="70dp"
             android:layout_height="19dp"
@@ -26,7 +26,7 @@
 
             />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:id="@+id/eventDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

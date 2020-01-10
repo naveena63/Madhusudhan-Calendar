@@ -6,7 +6,7 @@
     android:orientation="vertical"
 
     android:layout_height="match_parent"
-    tools:context="Zastra.GSTIT.SettingsMenu.HelpActivity">
+    tools:context="zastrait.GSTIT.SettingsMenu.HelpActivity">
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar_about"
         android:layout_width="match_parent"
@@ -26,7 +26,7 @@
             android:layout_margin="20dp"
             >
 
-            <Zastra.GSTIT.Utils.CustomTextViewNormal
+            <zastrait.GSTIT.Utils.CustomTextViewNormal
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="Please write to us at"
@@ -34,7 +34,7 @@
                 android:textSize="15dp"
                 android:textColor="@color/black"
 
-                ></Zastra.GSTIT.Utils.CustomTextViewNormal>
+                ></zastrait.GSTIT.Utils.CustomTextViewNormal>
             <androidx.appcompat.widget.AppCompatImageView
                 android:layout_width="wrap_content"
                 android:layout_height="200dp"
@@ -43,7 +43,7 @@
 
 
                 />
-            <Zastra.GSTIT.Utils.CustomTextViewNormal
+            <zastrait.GSTIT.Utils.CustomTextViewNormal
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textSize="20dp"
@@ -52,14 +52,14 @@
                 android:text="@string/contact_info"
                 android:layout_margin="20dp"
                 />
-            <Zastra.GSTIT.Utils.CustomTextViewNormal
+            <zastrait.GSTIT.Utils.CustomTextViewNormal
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
 android:layout_marginBottom="@dimen/margin_10dp"
                 android:text="@string/suport"
                 android:textAlignment="center"
                 android:textSize="15dp"
-                ></Zastra.GSTIT.Utils.CustomTextViewNormal>
+                ></zastrait.GSTIT.Utils.CustomTextViewNormal>
         </LinearLayout>
     </ScrollView>
 </androidx.appcompat.widget.LinearLayoutCompat>

@@ -26,14 +26,14 @@
 
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/white"
             android:text="Abbrevation names" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -47,7 +47,7 @@
 
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
@@ -55,7 +55,7 @@
             android:textColor="@color/red"
             />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -68,14 +68,14 @@
 
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/green"
             android:text="CEA" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -87,14 +87,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/Blue"
             android:text="ESI Act" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -104,14 +104,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/orange"
             android:text="@string/EPF" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -121,14 +121,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/yellow"
             android:text="EE(CNV)Act" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -138,14 +138,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/red"
             android:text="EOU" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -155,14 +155,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/green"
             android:text="EHTP" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -172,14 +172,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/Blue"
             android:text="FEMA" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -189,14 +189,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/orange"
             android:text="GHMC" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -206,14 +206,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/yellow"
             android:text="WCT" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -223,14 +223,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/red"
             android:text="MW Act" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -240,14 +240,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/green"
             android:text="PW Act" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -257,14 +257,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/Blue"
             android:text="PACs" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -274,14 +274,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/orange"
             android:text="PCS" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -291,14 +291,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/yellow"
             android:text="SSi" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -308,14 +308,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/red"
             android:text="SEBI(LODR)" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -325,14 +325,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/green"
             android:text="TDS" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -342,14 +342,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/Blue"
             android:text="TCS" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -359,14 +359,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/orange"
             android:text="ESI Act" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -377,14 +377,14 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
             android:textColor="@color/yellow"
             android:text="TOT" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"
@@ -394,7 +394,7 @@
         android:padding="5dp">
 
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="0.5"
@@ -402,7 +402,7 @@
 
             android:text="VAT" />
 
-        <Zastra.GSTIT.Utils.CustomTextViewNormal
+        <zastrait.GSTIT.Utils.CustomTextViewNormal
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="2"

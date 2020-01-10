@@ -30,7 +30,7 @@
 
             >
 
-            <Zastra.GSTIT.Utils.CustomTextViewNormal
+            <zastrait.GSTIT.Utils.CustomTextViewNormal
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="20dp"
@@ -43,7 +43,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
-                <Zastra.GSTIT.Utils.CustomTextViewNormal
+                <zastrait.GSTIT.Utils.CustomTextViewNormal
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Event Name"
@@ -70,7 +70,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
-                <Zastra.GSTIT.Utils.CustomTextViewNormal
+                <zastrait.GSTIT.Utils.CustomTextViewNormal
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Event Date"
@@ -79,7 +79,7 @@
                     android:padding="10dp"
 
                     />
-                <Zastra.GSTIT.Utils.CustomTextViewNormal
+                <zastrait.GSTIT.Utils.CustomTextViewNormal
                     android:id="@+id/tvStartEvent"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -88,7 +88,7 @@
                     android:layout_margin="10dp"
                     >
 
-                </Zastra.GSTIT.Utils.CustomTextViewNormal>
+                </zastrait.GSTIT.Utils.CustomTextViewNormal>
 
             </LinearLayout>
 
@@ -98,7 +98,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
-                <Zastra.GSTIT.Utils.CustomTextViewNormal
+                <zastrait.GSTIT.Utils.CustomTextViewNormal
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Description"
@@ -124,7 +124,7 @@
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
                 >
-                <Zastra.GSTIT.Utils.CustomTextViewNormal
+                <zastrait.GSTIT.Utils.CustomTextViewNormal
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="Theme Color"
@@ -134,7 +134,7 @@
 
                     />
 
-                <Zastra.GSTIT.Utils.CustomTextViewNormal
+                <zastrait.GSTIT.Utils.CustomTextViewNormal
                     android:id="@+id/tvThemeColor"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -143,7 +143,7 @@
                     android:layout_margin="10dp"
                     >
 
-                </Zastra.GSTIT.Utils.CustomTextViewNormal>
+                </zastrait.GSTIT.Utils.CustomTextViewNormal>
 
             </LinearLayout>
 

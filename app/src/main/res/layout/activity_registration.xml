@@ -14,7 +14,7 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
-            <Zastra.GSTIT.Utils.CustomTextViewNormal
+            <zastrait.GSTIT.Utils.CustomTextViewNormal
                 android:id="@+id/newText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -118,7 +118,7 @@
                     android:padding="10dp"
                     android:orientation="horizontal"
                     >
-                    <Zastra.GSTIT.Utils.CustomTextViewNormal
+                    <zastrait.GSTIT.Utils.CustomTextViewNormal
                         android:id="@+id/dropDownState"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -131,7 +131,7 @@
                         >
 
 
-                    </Zastra.GSTIT.Utils.CustomTextViewNormal>            />
+                    </zastrait.GSTIT.Utils.CustomTextViewNormal>            />
 
                     <!--                <Zastra.myapplication.Utils.CustomTextViewNormal-->
                     <!--                    android:id="@+id/tvThemeColor"-->
@@ -168,7 +168,7 @@
                     android:background="@color/colorAccent"
                     android:text="@string/text_register"
                     android:textColor="@color/white" />
-                <Zastra.GSTIT.Utils.CustomTextViewNormal
+                <zastrait.GSTIT.Utils.CustomTextViewNormal
                     android:id="@+id/goToLogin"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
