@@ -2,12 +2,10 @@ package zastrait.GSTIT.Calendar;
 import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
-
 import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,7 +13,6 @@ import android.view.ViewGroup;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -23,11 +20,9 @@ import com.android.volley.Response;
 import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
-
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
-
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -35,7 +30,6 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
-
 import zastrait.GSTIT.R;
 import zastrait.GSTIT.Utils.AppConstants;
 import zastrait.GSTIT.Utils.PrefManager;
@@ -57,9 +51,8 @@ public class CalendarFragment extends Fragment implements RecyclerViewListener {
     TextView tv_month, tv_year;
     PrefManager prefManager;
     View view;
-
     ProgressDialog progressBar;
-    RecyclerViewListener listener;
+
 
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
     @Override
@@ -89,7 +82,7 @@ public class CalendarFragment extends Fragment implements RecyclerViewListener {
         System.out.println("outpudffrjickicyt" + output);
         getData(output, true);
 
-        //setting recyclerview vieww
+        //setting recyclerview view
         GridLayoutManager layoutManager = new GridLayoutManager(getActivity(), 7);
         my_recycler_view.setLayoutManager(layoutManager);
 
@@ -99,7 +92,6 @@ public class CalendarFragment extends Fragment implements RecyclerViewListener {
         };
         dateadapter = new DateAdapter(getContext(), allSampleData, type, listener);
         eventADapter = new EventAdapter(getContext(), eventModelList, listener);
-
         Ib_next.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
