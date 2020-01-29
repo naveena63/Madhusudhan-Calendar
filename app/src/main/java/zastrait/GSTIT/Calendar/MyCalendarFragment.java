@@ -1,4 +1,5 @@
 package zastrait.GSTIT.Calendar;
+import android.app.ProgressDialog;
 import android.os.Build;
 import android.os.Bundle;
 
@@ -52,9 +53,11 @@ public class MyCalendarFragment extends Fragment {
     String inputdate, inputmnth;
     int inputyear;
     String output = "";
+    String nextmonth,prevMonth;
     TextView tv_month, tv_year;
     PrefManager prefManager;
     int type=1;
+    ProgressDialog progressBar;
     @RequiresApi(api = Build.VERSION_CODES.LOLLIPOP)
 
     @Override
@@ -68,7 +71,7 @@ public class MyCalendarFragment extends Fragment {
         tv_year = view.findViewById(R.id.tv_year);
         allSampleData = new ArrayList<DateModel>();
         eventModelList = new ArrayList<>();
-
+        progressBar = new ProgressDialog(getContext());
         requestQueue=Volley.newRequestQueue(getActivity());
         prefManager = new PrefManager(getContext());
         Date c = Calendar.getInstance().getTime();
@@ -76,7 +79,7 @@ public class MyCalendarFragment extends Fragment {
         SimpleDateFormat df = new SimpleDateFormat("dd-MM-yyyy");
         output = df.format(c);
         System.out.println("outpudffrjickicyt" + output);
-        getData();
+        getData(output, true);
         RecyclerViewListener listener = (view, position) -> {
             Toast.makeText(getContext(), "Position " + position, Toast.LENGTH_SHORT).show();
         };
@@ -97,6 +100,71 @@ public class MyCalendarFragment extends Fragment {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
+                //   clearData();
+                allSampleData.clear();
+                eventModelList.clear();
+
+//                String dt = "2012-01-04";  // Start date
+//
+//                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+//                Calendar c = Calendar.getInstance();
+//                try {
+//
+//                        c.setTime(sdf.parse(next_button));
+//                } catch (ParseException e) {
+//                    e.printStackTrace();
+//                }
+//                SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy");
+////                output = sdf1.format(c.getTime());
+////                System.out.println("output" + output);
+//
+////                c.add(Calendar.MONTH, 1);
+//                int next_month = c.get(Calendar.MONTH) + 1;
+//                c.add(Calendar.MONTH, next_month);
+//                output = sdf1.format(c.getTime());
+//                System.out.println("output" + output);
+//                getData(output, true);
+                String dt = "2012-01-04";  // Start date
+                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                Calendar c = Calendar.getInstance();
+                try {
+                    c.setTime(sdf.parse(nextmonth));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy");
+                output = sdf1.format(c.getTime());
+                System.out.println("output" + output);
+                getData(inputdate, false);
+            }
+        });
+        ib_prev.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onClick(View view) {
+                allSampleData.clear();
+                eventModelList.clear();
+
+                String dt = "2012-01-04";  // Start date
+                SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
+                Calendar c = Calendar.getInstance();
+                try {
+                    c.setTime(sdf.parse(prevMonth));
+                } catch (ParseException e) {
+                    e.printStackTrace();
+                }
+                SimpleDateFormat sdf1 = new SimpleDateFormat("dd-MM-yyyy");
+                output = sdf1.format(c.getTime());
+                System.out.println("output" + output);
+                getData(inputdate, false);
+            }
+        });
+        return view;
+    }
+      /*  Ib_next.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
+            @Override
+            public void onClick(View view) {
 
                 allSampleData.clear();
 
@@ -104,7 +172,7 @@ public class MyCalendarFragment extends Fragment {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
                 Calendar c = Calendar.getInstance();
                 try {
-                    c.setTime(sdf.parse(inputdate));
+                    c.setTime(sdf.parse(nextMonth));
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -157,8 +225,7 @@ public class MyCalendarFragment extends Fragment {
         ib_prev.setOnClickListener(new View.OnClickListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
-            public void onClick(View view)
-            {
+            public void onClick(View view) {
                 allSampleData.clear();
                 eventModelList.clear();
 
@@ -166,7 +233,7 @@ public class MyCalendarFragment extends Fragment {
                 SimpleDateFormat sdf = new SimpleDateFormat("dd-MM-yyyy");
                 Calendar c = Calendar.getInstance();
                 try {
-                    c.setTime(sdf.parse(inputdate));
+                    c.setTime(sdf.parse(prevMonth));
                 } catch (ParseException e) {
                     e.printStackTrace();
                 }
@@ -229,68 +296,161 @@ public class MyCalendarFragment extends Fragment {
             }
         });
         return view;
-    }
+    }*/
 
-    private void getData() {
+    private void getData(String date, boolean nextMonth) {
 
-        String url_formation = AppConstants.BASE_URL + AppConstants.MYCALENDAR + "date=" + output + "&type=month" + "&id_user=" +prefManager.getUserid();
-
-        StringRequest stringRequest = new StringRequest(Request.Method.POST, url_formation, new Response.Listener<String>() {
+        String url_formation = AppConstants.BASE_URL + AppConstants.MYCALENDAR + "date=" + output + "&type=month" + "&id_user=" + prefManager.getUserid();
+        Log.i("userid", "" + prefManager.getUserid());
+        progressBar.show();
+        StringRequest stringRequest = new StringRequest(Request.Method.GET, url_formation, new Response.Listener<String>() {
             @Override
             public void onResponse(String response) {
-
                 Log.i("response", "response" + response);
+                Calendar c = Calendar.getInstance();
                 try {
-
+                    progressBar.dismiss();
                     JSONObject jsonObject = new JSONObject(response);
                     String status = jsonObject.getString("status");
                     JSONObject jsonObject1 = jsonObject.getJSONObject("data");
                     inputyear = Integer.parseInt(jsonObject1.optString("year"));
-                    inputmnth = jsonObject1.optString("monthname");
+                    inputmnth = jsonObject1.getString("monthname");
+                    prevMonth = jsonObject1.getString("prev");
+                    nextmonth = jsonObject1.getString("next");
                     tv_month.setText(inputmnth);
                     tv_year.setText(String.valueOf(inputyear));
-
                     Log.i("response", "response" + response);
+
                     if (status.equalsIgnoreCase("true")) {
-
                         JSONArray jsonArray = jsonObject1.getJSONArray("data");
-                        JSONObject json2 = jsonArray.getJSONObject(0);
-                        inputdate = json2.optString("event_date");
+                        JSONObject json2 = jsonArray.getJSONObject(10);
+                        inputdate = json2.getString("event_date");
                         System.out.println("inputdate" + inputdate);
-
                         for (int i = 0; i < jsonArray.length(); i++) {
                             JSONObject json = jsonArray.getJSONObject(i);
                             DateModel dateModel = new DateModel();
                             String date = json.getString("event_date");
-                            dateModel.setCalendarDate(date);
-
+                            inputdate = date;
+                            dateModel.setCalendarDate(inputdate);
                             JSONArray jsonArray1 = json.getJSONArray("event_names");
                             eventModelList = new ArrayList<>();
-
                             for (int j = 0; j < jsonArray1.length(); j++) {
                                 JSONObject jsonObject2 = jsonArray1.getJSONObject(j);
                                 String eventName = jsonObject2.getString("event_name");
                                 String eventColor = jsonObject2.getString("color_code");
                                 Log.e("color", eventColor);
                                 eventModelList.add(new EventModel(eventName, eventColor));
-
                             }
                             dateModel.setAllItemsInSection(eventModelList);
                             allSampleData.add(dateModel);
+
+                        }
+
+                        if (nextMonth) {
+                            if (inputmnth.equalsIgnoreCase("Jan")) {
+                                c.add(Calendar.DATE, 31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Feb")) {
+
+                                if ((inputyear % 400 == 0) || (inputyear % 100 == 0) || (inputyear % 4 == 0)) {
+                                    c.add(Calendar.DATE, 29);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                                } else {
+                                    c.add(Calendar.DATE, 29);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+                                }
+
+                            } else if (inputmnth.equalsIgnoreCase("Mar")) {
+                                c.add(Calendar.DATE, 31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Apr")) {
+                                c.add(Calendar.DATE, 30);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("May")) {
+                                c.add(Calendar.DATE, 31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Jun")) {
+                                c.add(Calendar.DATE, 30);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Jul")) {
+                                c.add(Calendar.DATE, 31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Aug")) {
+                                c.add(Calendar.DATE, 31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Sep")) {
+                                c.add(Calendar.DATE, 30);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Oct")) {
+                                c.add(Calendar.DATE, 31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Nov")) {
+                                c.add(Calendar.DATE, 30);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Dec")) {
+                                c.add(Calendar.DATE, 31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            }
+                        } else {
+                            if (inputmnth.equalsIgnoreCase("Jan")) {
+                                c.add(Calendar.DATE, -31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Feb")) {
+                                c.add(Calendar.DATE, -31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                                if ((inputyear % 400 == 0) || (inputyear % 100 == 0) || (inputyear % 4 == 0)) {
+
+                                } else {
+                                    c.add(Calendar.DATE, -28);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+                                }  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+
+                            } else if (inputmnth.equalsIgnoreCase("Mar")) {
+                                if ((inputyear % 400 == 0) || (inputyear % 100 == 0) || (inputyear % 4 == 0)) {
+                                    c.add(Calendar.DATE, -29);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+                                } else {
+                                    c.add(Calendar.DATE, -28);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+                                }
+                            } else if (inputmnth.equalsIgnoreCase("Apr")) {
+                                c.add(Calendar.DATE, -31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("May")) {
+                                c.add(Calendar.DATE, -30);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Jun")) {
+                                c.add(Calendar.DATE, -31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Jul")) {
+                                c.add(Calendar.DATE, -30);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Aug")) {
+                                c.add(Calendar.DATE, -31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Sep")) {
+                                c.add(Calendar.DATE, -31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Oct")) {
+                                c.add(Calendar.DATE, -30);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Nov")) {
+                                c.add(Calendar.DATE, -31);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            } else if (inputmnth.equalsIgnoreCase("Dec")) {
+                                c.add(Calendar.DATE, -30);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
+
+                            }
                         }
                         my_recycler_view.setAdapter(adapter);
                         adapter.notifyDataSetChanged();
+                        my_recycler_view.setFocusable(false);
                     }
-
-
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
-
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
+                progressBar.dismiss();
                 Toast.makeText(getActivity(), error.getMessage(), Toast.LENGTH_LONG).show();
             }
         }) {
@@ -302,4 +462,5 @@ public class MyCalendarFragment extends Fragment {
         };
         requestQueue.add(stringRequest);
     }
+
 }
