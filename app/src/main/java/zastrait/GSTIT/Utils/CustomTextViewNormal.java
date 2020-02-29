@@ -37,4 +37,7 @@ public class CustomTextViewNormal extends TextView {
         setTypeface(externalFont);
 
     }
+
+    public void setTextColor(String s) {
+    }
 }

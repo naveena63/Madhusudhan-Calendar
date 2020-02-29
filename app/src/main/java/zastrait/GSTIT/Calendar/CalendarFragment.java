@@ -186,10 +186,13 @@ public class CalendarFragment extends Fragment implements RecyclerViewListener {
                         inputdate = json2.getString("event_date");
                         System.out.println("inputdate" + inputdate);
                         for (int i = 0; i < jsonArray.length(); i++) {
+
+
                             JSONObject json = jsonArray.getJSONObject(i);
                             DateModel dateModel = new DateModel();
                             String date = json.getString("event_date");
                             inputdate = date;
+
                             dateModel.setCalendarDate(inputdate);
                             JSONArray jsonArray1 = json.getJSONArray("event_names");
                             eventModelList = new ArrayList<>();
@@ -198,6 +201,7 @@ public class CalendarFragment extends Fragment implements RecyclerViewListener {
                                 String eventName = jsonObject2.getString("event_short");
                                 String eventColor = jsonObject2.getString("color_code");
                                 Log.e("color", eventColor);
+
                                 eventModelList.add(new EventModel(eventName, eventColor));
                             }
                             dateModel.setAllItemsInSection(eventModelList);
@@ -261,8 +265,6 @@ public class CalendarFragment extends Fragment implements RecyclerViewListener {
                                 } else {
                                     c.add(Calendar.DATE, -28);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
                                 }  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
-
-
                             } else if (inputmnth.equalsIgnoreCase("Mar")) {
                                 if ((inputyear % 400 == 0) || (inputyear % 100 == 0) || (inputyear % 4 == 0)) {
                                     c.add(Calendar.DATE, -29);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
@@ -295,12 +297,9 @@ public class CalendarFragment extends Fragment implements RecyclerViewListener {
 
                             } else if (inputmnth.equalsIgnoreCase("Dec")) {
                                 c.add(Calendar.DATE, -30);  // number of days to add, can also use Calendar.DAY_OF_MONTH in place of Calendar.DATE
-
                             }
                         }
-
                         my_recycler_view.setAdapter(dateadapter);
-
                         dateadapter.notifyDataSetChanged();
                         my_recycler_view.setFocusable(false);
                     }

@@ -161,6 +161,7 @@ public class DateAdapter extends RecyclerView.Adapter<DateAdapter.ItemRowHolder>
 
                                                 JSONObject jsonObject2 = jsonArray.getJSONObject(i);
                                                 String eventDtae = jsonObject2.getString("event_date");
+
                                                 JSONArray jsonArray1 = jsonObject2.getJSONArray("event_names");
                                                 userFormModelArrayList = new ArrayList<>();
                                                 for (int j = 0; j < jsonArray1.length(); j++) {

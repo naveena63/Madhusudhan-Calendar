@@ -18,7 +18,7 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.SingleItemRo
 
     private ArrayList<EventModel> itemsList;
     private Context mContext;
-RecyclerViewListener listener;
+    RecyclerViewListener listener;
 
     PrefManager prefManager;
     protected CustomTextViewNormal tv_event;
@@ -26,7 +26,7 @@ RecyclerViewListener listener;
     public EventAdapter(Context context, ArrayList<EventModel> itemsList, RecyclerViewListener listener) {
         this.itemsList = itemsList;
         this.mContext = context;
-this.listener=listener;
+        this.listener = listener;
     }
 
     @Override
@@ -43,30 +43,34 @@ this.listener=listener;
 
         EventModel singleItem = itemsList.get(i);
 
-        String event=(itemsList.get(i).getEventName());
+        String event = (itemsList.get(i).getEventName());
         String upToNCharacters = event.substring(0, Math.min(event.length(), 4));
 
         tv_event.setText(upToNCharacters);
 
 
-
-        String color=singleItem.getEventColor();
-        Log.e("colorevt",color);
-        if (color.equals("#0000FF")){
+        String color = singleItem.getEventColor();
+        Log.e("colorevt", color);
+        if (color.equals("#0000FF")) {
             tv_event.setBackgroundResource(R.color.Blue);
 
-        } if (color.equals("#FF0000")){
+        }
+        if (color.equals("#FF0000")) {
             tv_event.setBackgroundResource(R.color.red);
 
-        } if (color.equals("#00FF00")){
+        }
+        if (color.equals("#00FF00")) {
             tv_event.setBackgroundResource(R.color.green);
 
-        } if (color.equals("#FFA500")){
+        }
+        if (color.equals("#FFA500")) {
             tv_event.setBackgroundResource(R.color.orange);
 
-        } if (color.equals("#9B870C")){
+        }
+        if (color.equals("#9B870C")) {
             tv_event.setBackgroundResource(R.color.yellow);
-        }if (color.equals("#006699")){
+        }
+        if (color.equals("#006699")) {
             tv_event.setBackgroundResource(R.color.navBlue);
         }
 
@@ -85,11 +89,12 @@ this.listener=listener;
             tv_event = view.findViewById(R.id.eventNme);
 
             tv_event.setOnClickListener(new View.OnClickListener() {
-      @Override
-      public void onClick(View v) {
+                @Override
+                public void onClick(View v) {
 
-      }
-  });
+
+                }
+            });
 
 
         }

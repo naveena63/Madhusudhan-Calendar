@@ -217,6 +217,8 @@
             android:gravity="center"
             android:listSelector="@android:color/transparent"
             android:numColumns="7"
-            android:textAlignment="gravity"></androidx.recyclerview.widget.RecyclerView>
+            android:textAlignment="gravity">
+
+        </androidx.recyclerview.widget.RecyclerView>
     </LinearLayout>
 </LinearLayout>
