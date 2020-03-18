@@ -60,7 +60,6 @@ public class FormActivity extends AppCompatActivity {
         Log.i("event", "event" + prefManager.getEventname());
         btnSave = findViewById(R.id.btnSave);
         btnClose = findViewById(R.id.btnClose);
-
         btnClose.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -68,7 +67,6 @@ public class FormActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
         btnSave.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -78,7 +76,6 @@ public class FormActivity extends AppCompatActivity {
                 }
             }
         });
-
         List<String> colorsList = new ArrayList<String>();
         colorsList.add("blue");
         colorsList.add("red");
@@ -102,7 +99,6 @@ public class FormActivity extends AppCompatActivity {
         };
         buttonShowDropDown.setOnClickListener(handler);
 
-
 //        String color = buttonShowDropDown.getText().toString();
 //        Log.i("charanevent","colr"+color);
 //        if (color.equals("blue")) {
@@ -120,7 +116,7 @@ public class FormActivity extends AppCompatActivity {
 //        if (color.equals("yellow")) {
 //             col="#9B870C";
 //        }
-//Log.i("colorcode","col"+col);
+//            Log.i("colorcode","col"+col);
 //    }
     }
     public PopupWindow popupWindowColors()
@@ -136,8 +132,8 @@ public class FormActivity extends AppCompatActivity {
         return popupWindow;
     }
 
-    private ArrayAdapter<String> dogsAdapter(String dogsArray[]) {
-
+    private ArrayAdapter<String> dogsAdapter(String dogsArray[])
+    {
         ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, dogsArray) {
             @Override
             public View getView(int position, View convertView, ViewGroup parent) {
@@ -152,8 +148,6 @@ public class FormActivity extends AppCompatActivity {
                 listItem.setPadding(10, 10, 10, 10);
                 listItem.setTextColor(Color.BLACK);
                 listItem.setBackgroundColor(Color.WHITE);
-
-
 //                switch (position) {
 //                    case 0:
 //                        eteventName.setTextColor(Color.BLUE);
@@ -168,11 +162,9 @@ public class FormActivity extends AppCompatActivity {
 //                        eteventName.setTextColor(Color.GREEN);
 //                        break;
 //                }
-
                 return listItem;
             }
         };
-
         return adapter;
     }
     private void getForm() {
@@ -202,7 +194,6 @@ public class FormActivity extends AppCompatActivity {
             col="#006699";
         }
         Log.i("colorcode","col"+col);
-
 
         StringRequest stringRequest = new StringRequest(Request.Method.POST, AppConstants.BASE_URL + AppConstants.FORM,
                 new Response.Listener<String>() {
